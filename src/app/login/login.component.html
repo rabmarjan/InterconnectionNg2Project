@@ -1,0 +1,23 @@
+<br><br><br><br><br><br><br><br><br>
+<form [formGroup]="loginForm" (ngSubmit)="login()" style="padding-left: 540px">
+  <div>
+  <label for="username">username</label>
+  <input type="text" name="username" id="username" [formControl]="username">
+  <div [hidden]="username.valid || username.untouched">
+  <div [hidden]="username.pristine">I've been changed</div>
+    <!--<div>The following problems have been found with the username</div>-->
+    <div [hidden]="!username.hasError('required')">Username is required</div>
+  </div>
+  </div>
+  <div>
+  <label for="password">password</label>
+  <input type="password" name="password" id="password" [formControl]="password">
+  <div [hidden]="password.valid || password.untouched">
+     <div [hidden]="password.pristine">I've been changed</div>
+    <!--<div>The following problem has been found with the password</div>-->
+    <div [hidden]="!password.hasError(['required' && 'minlength'])">The gt 6 chr long password is required</div>
+  </div>
+  </div>
+ <div style="padding-left: 185px"> <button class ="btn btn-primary" type="submit" [disabled]="!loginForm.valid">log in</button></div>
+</form>
+ <br><br><br><br>

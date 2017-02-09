@@ -8,6 +8,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialComponent } from './material/material.component';
 import { AuthGuard } from './login/auth.guard';
+//import { NgBootstrapComponent } from './ng-bootstrap/ng-bootstrap.component';
 
 
 const appRoutes: Routes = [
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'dashboard',     component: DashboardComponent, canActivate: [AuthGuard]},
   { path: 'landing',       component: LandingPageComponent},
   { path: 'material',      component: MaterialComponent},
+  { path: 'ngbootstrap',   loadChildren: './ng-bootstrap/ng-bootstrap.module#NgBootstrapModule'},
   { path: '',              redirectTo: '/login', pathMatch: 'full' },
   { path: '**',            component: PageNotFoundComponent }
 ];

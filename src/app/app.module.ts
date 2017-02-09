@@ -8,6 +8,8 @@ import { HttpService } from './services/http.service';
 import { LoginService } from './services/login.service';
 import { CustomerService } from './services/customer.service';
 import { DashboardService } from './services/dashboard.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgBootstrapModule } from './ng-bootstrap/ng-bootstrap.module';
 
 //import { RouterModule, Routes } from '@angular/router';
 import { CrisisListComponent } from './others/crisis-list.component';
@@ -22,6 +24,7 @@ import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { MaterialComponent } from './material/material.component';
 import { AuthGuard } from './login/auth.guard';
+//import { NgBootstrapComponent } from './ng-bootstrap/ng-bootstrap.component';
 
 
 @NgModule({
@@ -44,7 +47,9 @@ import { AuthGuard } from './login/auth.guard';
     FormsModule,
     ReactiveFormsModule,
     HttpModule ,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    NgbModule.forRoot(),
+    NgBootstrapModule
   ],
   providers: [HelloService, LoginService, CustomerService, HttpService, DashboardService, AuthGuard],
   bootstrap: [AppComponent]

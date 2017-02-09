@@ -1,0 +1,32 @@
+body {
+	
+}
+
+div.module_gry {
+	border: #B0BAA6 1px solid;
+	height: auto;
+	text-align: left;
+	background-color: #fefff5;
+}
+
+div.module_gry h3 {
+	/*background: url(../images/box_top.gif) repeat-x left bottom;*/
+	padding-left: 10px;
+	height: 40px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	border-bottom: #B0BAA6 1px solid;
+	padding-top: 13px;
+	vertical-align: middle;
+	margin-top: 0px;
+}
+
+.module_gry div.modulebody p {
+	text-align: justify; line-height: 1.6;
+}
+
+.module_gry div.modulebody {
+	padding: 2px 10px;
+}
+

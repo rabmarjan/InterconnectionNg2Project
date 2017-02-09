@@ -13,18 +13,15 @@ import { DashboardService } from './services/dashboard.service';
 import { CrisisListComponent } from './others/crisis-list.component';
 import { HerroDetailComponent } from './others/herro-detail.component';
 import { PageNotFoundComponent } from './others/page-not-found.component';
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
+import { routes } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
-
-// const appRoutes: Routes = [
-//   {path: 'crisis-center', component: CrisisListComponent},
-//   {path:'heroes', component: HerroDetailComponent},
-//    { path: '**', component: PageNotFoundComponent }
-
-// ];
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
+import { MaterialComponent } from './material/material.component';
+import { AuthGuard } from './login/auth.guard';
 
 
 @NgModule({
@@ -35,18 +32,21 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PageNotFoundComponent,
     LoginComponent,
     LandingPageComponent,
-    DashboardComponent
+    DashboardComponent,
+    MaterialComponent
    
   ],
   imports: [
     //RouterModule.forRoot(appRoutes),
-    AppRoutingModule,
+    //AppRoutingModule,
+    routes,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule 
+    HttpModule ,
+    MaterialModule.forRoot()
   ],
-  providers: [HelloService, LoginService, CustomerService, HttpService, DashboardService],
+  providers: [HelloService, LoginService, CustomerService, HttpService, DashboardService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,8 @@
-<a routerLink="/heroes" >Heroes</a>
 <a routerLink="/login" routerLinkActive="active">Login</a>
 <a routerLink="/crisis-center" >Crisis-center</a>
+<a routerLink="/landing">Landing Page</a>
+<a routerLink="/material">Material Design</a>
+<a routerLink="/heroes">Heroes</a>
 <router-outlet></router-outlet> 
 <form #f="ngForm" novalidate>
     <div class="row">
@@ -121,7 +123,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor=" let user of userList">
+      <tr *ngFor="let user of userList">
         <td>{{user.fname}}</td>
         <td>{{user.lname}}</td>
         <td>{{user.email}}</td>

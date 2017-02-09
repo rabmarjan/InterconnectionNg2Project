@@ -9,6 +9,7 @@ import { NgForm, } from '@angular/forms';
    <a routerLink="/login" routerLinkActive="active">Login</a>
    <a routerLink="/landing" >Landing Page</a>
    <a routerLink="/dashboard" >Dashboard</a>
+   <a routerLink="/material" >Material Design</a>
    <router-outlet></router-outlet> 
     <p> crisis-list Works! </p>
     <form #signUpForm="ngForm" (ngSubmit)="registerUser(signUpForm); signUpForm.reset()">

@@ -13,8 +13,10 @@ export class LoginComponent implements OnInit {
   username: FormControl;
   password: FormControl;
   cookieStor = [];
+  reportList = [];
   errorMessage = "Login Failed";
   location: Location;
+
   constructor(builder: FormBuilder, private loginService: LoginService, private router: Router) {
     this.username = new FormControl('', [Validators.required]);
     this.password = new FormControl('', [Validators.required, Validators.minLength(6)]);
@@ -22,28 +24,29 @@ export class LoginComponent implements OnInit {
       username: this.username,
       password: this.password
     });
-   }
-   
-   login() {
-		this.loginService.login(this.loginForm.value)
-		  .subscribe(cookieStor => {
+  }
+
+  login() {
+    this.loginService.login(this.loginForm.value)
+      .subscribe(cookieStor => {
         this.cookieStor = cookieStor;
         sessionStorage.setItem('rolejson', JSON.stringify(cookieStor));
-        this.cookieStor = JSON.parse(cookieStor.roleJSON).categories;
-        console.log(this.cookieStor);
+        this.reportList = JSON.parse(cookieStor.roleJSON).categories;
+        sessionStorage.setItem('reportList', JSON.stringify(this.reportList));
+        console.log(this.reportList);
       },
-        err => { this.errorMessage = err.message; },
-       () => { console.log('Data Loading Completed'); });
-       //console.log(this.cookieStor);
-      
-       //location.href("localhost:4200");
-       //this.router.navigate(["/crisis-center"])
-        this.router.navigate(["/dashboard"])
-	}
+      err => { this.errorMessage = err.message; },
+      () => { console.log('Data Loading Completed'); });
+    //console.log(this.cookieStor);
+
+    //location.href("localhost:4200");
+    //this.router.navigate(["/crisis-center"])
+    this.router.navigate(["/dashboard"])
+  }
+  
   //  login(){
   //    console.log(this.loginForm.value);
   //  }
-
   ngOnInit() {
   }
 

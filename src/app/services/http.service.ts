@@ -14,7 +14,7 @@ export class HttpService {
     return this.http
     .get('http://localhost:8000/billcollection')
      .map(response => response.json());
-    //.get('https://api.spotify.com/v1/search?q='	+	term	+	'&type=artist')
+    
   }
 
 getAll(){

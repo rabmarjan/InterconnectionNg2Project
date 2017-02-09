@@ -20,4 +20,12 @@ export class LoginService {
       });
   }
 
+  isAuthenticated(){
+    // if (localStorage.getItem("rolejson")["username"] === null) {
+    //    console.log(localStorage.getItem("rolejson")["username"]);
+    //    return false;  
+    // }
+    return true;
+  }
+
 }

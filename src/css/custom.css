@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: myBanglaFont;
-    src: url(../fonts/SolaimanLipi_22-02-2012.ttf);
+    /*src: url(../fonts/SolaimanLipi_22-02-2012.ttf);*/
     font-weight: bold;
 }
 
@@ -112,7 +112,7 @@ body {
 	height: 32px;
 	margin-right: 5px;
 }
-.facebook {
+/*.facebook {
 	background: rgba(0, 0, 0, 0) url("../images/socialpack/facebook.png") repeat scroll 0 0
 }
 .facebook:hover {
@@ -123,7 +123,7 @@ body {
 }
 .twitter:hover {
 	background: rgba(0, 0, 0, 0) url(../images/socialpack/twittera.png);
-}
+}*/
 .back-top {
 	bottom: 55px;
 	right: 20px;
@@ -140,7 +140,7 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
-	background: #333 url(../images/up-arrow.png) no-repeat center center;
+	/*background: #333  no-repeat center center; url(../images/up-arrow.png)*/
 	border-radius: 5px;
 	-webkit-transition: 1s;
 	-moz-transition: 1s;
@@ -167,7 +167,7 @@ div.module_gry {
 }
 
 div.module_gry h3 {
-	background: url(../images/box_top.gif) repeat-x left bottom;
+	/*background: url(../images/box_top.gif) repeat-x left bottom;*/
 	padding-left: 10px;
 	height: 40px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -186,7 +186,7 @@ div.module_gry h3 {
 .links-div-items {
 	padding-left: 10px;
 	list-style: none; 
-	background: url(../images/bullet_green.gif) top left no-repeat;
+	/*background: url(../images/bullet_green.gif) top left no-repeat;*/
 	line-height: 20px;
 }
 .links-div-items a {
@@ -227,10 +227,10 @@ div.module_gry h3 {
 }
 .webHeader {
 	
-    background: -webkit-linear-gradient(left top,  , #FFFFB2 80%, white 100% ); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(left top,  , #FFFFB2 80%, white 100% ); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(left top,  , #FFFFB2 80%, white 100% ); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(left top,  , #FFFFB2 80%, white 100% );/* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(left top,  #FFFFB2 80%, white 100% ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left top,   #FFFFB2 80%, white 100% ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left top,   #FFFFB2 80%, white 100% ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left top,  #FFFFB2 80%, white 100% );/* Standard syntax (must be last) */
 }
 
 
@@ -480,3 +480,4 @@ div.module_gry h3 {
 	vertical-align: middle;
 	white-space: nowrap;
 }
+

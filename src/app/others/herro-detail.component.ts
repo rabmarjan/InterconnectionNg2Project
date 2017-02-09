@@ -10,10 +10,11 @@ import {FormGroup, FormControl, FormBuilder, NgForm} from '@angular/forms';
   selector: 'app-herro-detail',
   template: `
    <div>
-   <a routerLink="/login" routerLinkActive="active">Login</a>
+    <a routerLink="/login" routerLinkActive="active">Login</a>
     <a routerLink="/crisis-center">Crisis Center</a>
     <a routerLink="/landing" >Landing Page</a>
     <a routerLink="/dashboard" >Dashboard</a>
+    <a routerLink="/material" >Material Design</a>
     <router-outlet></router-outlet> 
      <section>
     <form [formGroup]="coolForm">

@@ -1,23 +1,32 @@
 <br><br><br><br><br><br><br><br><br>
-<form [formGroup]="loginForm" (ngSubmit)="login()" style="padding-left: 540px">
-  <div>
-  <label for="username">username</label>
-  <input type="text" name="username" id="username" [formControl]="username">
-  <div [hidden]="username.valid || username.untouched">
-  <div [hidden]="username.pristine">I've been changed</div>
-    <!--<div>The following problems have been found with the username</div>-->
-    <div [hidden]="!username.hasError('required')">Username is required</div>
+<div class="row" style="margin-right:0px;">
+<div class="col-md-4 col-md-offset-4">
+  <div class="module_gry" style="margin: auto;">
+<h3>Login</h3>
+<div class="modulebody" style="height: 148px;">
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="login id" name="username" id="username" [formControl]="username">
+    <div [hidden]="username.valid || username.untouched">
+      <div [hidden]="username.pristine">I've been changed</div>
+      <!--<div>The following problems have been found with the username</div>-->
+      <div [hidden]="!username.hasError('required')">Username is required</div>
+    </div>
   </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="password" type="password" name="password" id="password" [formControl]="password">
+    <div [hidden]="password.valid || password.untouched">
+      <div [hidden]="password.pristine">I've been changed</div>
+      <!--<div>The following problem has been found with the password</div>-->
+      <div [hidden]="!password.hasError(['required' && 'minlength'])">The gt 6 chr long password is required</div>
+    </div>
   </div>
-  <div>
-  <label for="password">password</label>
-  <input type="password" name="password" id="password" [formControl]="password">
-  <div [hidden]="password.valid || password.untouched">
-     <div [hidden]="password.pristine">I've been changed</div>
-    <!--<div>The following problem has been found with the password</div>-->
-    <div [hidden]="!password.hasError(['required' && 'minlength'])">The gt 6 chr long password is required</div>
-  </div>
-  </div>
- <div style="padding-left: 185px"> <button class ="btn btn-primary" type="submit" [disabled]="!loginForm.valid">log in</button></div>
+  <div class="form-group" style="padding-left: 185px">
+<button class="btn btn-primary" style="float:right;background-color:#5CAD5C;border-color: #5CAD5C;" type="submit" [disabled]="!loginForm.valid">log in</button>
+</div>
 </form>
- <br><br><br><br>
+</div>
+</div>
+</div>
+</div>
+<br><br><br><br>

@@ -1,5 +1,56 @@
 <a routerLink="/login" routerLinkActive="active">Login</a>
 <a routerLink="/crisis-center">Crisis Center</a>
-<a routerLink="/landing" >Landing Page</a>
-<a routerLink="/heroes" >Heroes</a>
+<a routerLink="/landing">Landing Page</a>
+<a routerLink="/material">Material Design</a>
+<a routerLink="/heroes">Heroes</a>
 <router-outlet></router-outlet>
+		
+<section>
+	<div class="container">
+        <div class="row" *ngFor="let category of reportJson; let i = index;">
+            <div *ngIf="i % 2 == 0">
+                	<div *ngIf="reportJson.length > (i)">
+				<div class="col-md-6">
+					<div class="box box-rmms">
+						<div class="box-body">
+							<div class="inner">
+								<p class="report-sub-heading">{{reportJson[i].name}}</p>
+								<p class="ng-scope report-sub-link"
+									*ngFor="let link of reportJson[i].reportList"
+                                    (click)="performClickAction(link.url)"
+									style="cursor: pointer">
+									<a> <i class="{{link.class}}"></i> <span>{{link.text}}</span>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div *ngIf="reportJson.length > (i + 1)">
+				<div class="col-md-6">
+					<div class="box box-rmms">
+						<div class="box-body">
+							<div class="inner">
+								<p class="report-sub-heading">{{reportJson[i+1].name}}</p>
+								<p class="ng-scope report-sub-link"
+									*ngFor="let link of reportJson[i+1].reportList"
+                                    (click)="performClickAction(link.url)"
+									style="cursor: pointer">
+									<a> <i class="{{link.class}}"></i> <span>{{link.text}}</span>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            </div>
+        </div>
+	</div>
+</section>
+		
+
+
+
+
